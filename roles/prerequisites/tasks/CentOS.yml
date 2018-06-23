@@ -9,3 +9,8 @@
   yum:
     name: git
     state: latest
+
+- name: Install Mosh
+  yum:
+    name: mosh
+    state: latest

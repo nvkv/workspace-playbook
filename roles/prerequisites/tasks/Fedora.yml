@@ -1,7 +1,11 @@
 ---
 
 - name: Install Git
-  become_user: root
   dnf:
     name: git
+    state: latest
+
+- name: Install Mosh
+  dnf:
+    name: mosh
     state: latest
