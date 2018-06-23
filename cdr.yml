@@ -1,0 +1,5 @@
+- hosts: cdr
+  become: yes
+  roles:
+    - prerequisites
+    - emacs

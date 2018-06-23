@@ -1,0 +1,13 @@
+---
+
+- name: Install Emacs
+  become_user: root
+  yum:
+    name: emacs-nox
+    state: latest
+
+- name: Get latest emacs config
+  become_user: nsa
+  git:
+    repo: git@github.com:nvkv/emacs.d.git
+    dest: ~/.emacs.d

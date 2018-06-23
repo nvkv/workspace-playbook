@@ -1,0 +1,5 @@
+- hosts: ducky
+  become: yes
+  roles:
+    - prerequisites
+    - emacs

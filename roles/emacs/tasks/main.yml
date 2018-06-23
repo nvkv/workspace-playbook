@@ -1,0 +1,10 @@
+---
+
+
+- name: Setup Fedora
+  include: Fedora.yml
+  when: ansible_distribution == "Fedora"
+
+- name: Setup CentOS
+  include: CentOS.yml
+  when: ansible_distribution == "CentOS"
