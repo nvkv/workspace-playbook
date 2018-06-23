@@ -1,0 +1,6 @@
+---
+
+- name: Install the silver searcher for CentOS
+  yum:
+    name: the_silver_searcher
+    state: latest

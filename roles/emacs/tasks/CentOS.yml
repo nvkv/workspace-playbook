@@ -7,7 +7,7 @@
     state: latest
 
 - name: Get latest emacs config
-  become_user: nsa
+  become: no
   git:
     repo: git@github.com:nvkv/emacs.d.git
     dest: ~/.emacs.d

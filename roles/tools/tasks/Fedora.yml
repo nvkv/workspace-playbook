@@ -1,0 +1,6 @@
+---
+
+- name: Install the silver searcher for Fedora
+  dnf:
+    name: the_silver_searcher
+    state: latest
