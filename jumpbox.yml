@@ -1,8 +1,9 @@
-- hosts: cdr
+---
+
+- hosts: jumpboxes
   become: yes
   roles:
     - prerequisites
     - emacs
     - tmux
     - tools
-    - openvpn

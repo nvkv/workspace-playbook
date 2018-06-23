@@ -9,5 +9,5 @@
 - name: Get latest emacs config
   become: no
   git:
-    repo: git@github.com:nvkv/emacs.d.git
+    repo: https://github.com/nvkv/emacs.d.git
     dest: ~/.emacs.d

@@ -1,0 +1,6 @@
+---
+
+- name: Install OpenVPN
+  dnf:
+    name: openvpn
+    state: latest

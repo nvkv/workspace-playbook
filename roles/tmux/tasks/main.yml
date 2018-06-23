@@ -9,7 +9,7 @@
   when: ansible_distribution == "CentOS"
 
 - name: Configure tmux for Linux
-  become_user: nsa
+  become: no
   template:
     src: tmux-linux.conf
     dest: ~/.tmux.conf
