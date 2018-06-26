@@ -9,3 +9,8 @@
   dnf:
     name: mosh
     state: latest
+
+- name: Install libselinux-python
+  dnf:
+    name: libselinux-python
+    state: latest

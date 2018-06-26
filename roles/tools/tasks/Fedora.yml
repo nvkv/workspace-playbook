@@ -4,3 +4,29 @@
   dnf:
     name: the_silver_searcher
     state: latest
+
+- name: Install bash_it
+  become: no
+  git:
+    repo: https://github.com/Bash-it/bash-it.git
+    dest: ~/.bash_it
+    depth: 1
+  register: bash_it
+
+- name: Install bash_it
+  become: no
+  shell: ~/.bash_it/install.sh > ~/.bash_it_install_log
+  args:
+    creates: ~/.bash_it_install_log
+
+- name: Ensure directory for colortheme is there
+  become: no
+  file:
+    path: ~/.bash_it/themes/nsa/
+    state: directory
+
+- name: Install nsa theme
+  become: no
+  template:
+    src: nsa.theme.bash
+    dest: ~/.bash_it/themes/nsa/nsa.theme.bash
